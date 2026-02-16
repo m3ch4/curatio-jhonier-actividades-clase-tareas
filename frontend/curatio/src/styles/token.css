@@ -1,0 +1,88 @@
+/*Se ingresan las variables tal y como estan en la guia de estilos*/
+
+:root {
+
+    /*Primary color*/
+    --color-primary-950: #F0F4FD;
+    --color-primary-900: #393B76;
+    --color-primary-800: #3D3D8F;
+    --color-primary-700: #4C4BB7;
+    --color-primary-600: #5B5BD0;
+    --color-primary-500: #767EDE;
+    --color-primary-400: #919EE8;
+    --color-primary-300: #B0BFF1;
+    --color-primary-200: #CED8F7;
+    --color-primary-100: #E4EAFB;
+    --color-primary-50: #F0F4FD;
+
+    /*secondary color*/
+
+    --color-secondary-950: #141F1E;
+    --color-secondary-900: #2A3736;
+    --color-secondary-800: #2F403F;
+    --color-secondary-700: #364F4D;
+    --color-secondary-600: #41605D;
+    --color-secondary-500: #537975;
+    --color-secondary-400: #6D948F;
+    --color-secondary-300: #94B4AF;
+    --color-secondary-200: #BDD2CE;
+    --color-secondary-100: #DEE9E7;
+    --color-secondary-50: #F5F8F7;
+
+    /*Terciario*/
+    --color-tertiary-950: #172554;
+    --color-tertiary-900: #1E378A;
+    --color-tertiary-800: #1E3FAF;
+    --color-tertiary-700: #1D48D8;
+    --color-tertiary-600: #2552EB;
+    --color-tertiary-500: #3B66F6;
+    --color-tertiary-400: #6083FA;
+    --color-tertiary-300: #93ABFD;
+    --color-tertiary-200: #BFCDFE;
+    --color-tertiary-100: #DBE3FE;
+    --color-tertiary-50: #EFF3FF;
+
+    /*Basicos*/
+
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray-950: #F6F6F6;
+    --color-gray-900: #E9E9E9;
+    --color-gray-800: #D1D1D1;
+    --color-gray-700: #B8B8B8;
+    --color-gray-600: #9F9F9F;
+    --color-gray-500: #878787;
+    --color-gray-400: #6E6E6E;
+    --color-gray-300: #565656;
+    --color-gray-200: #3D3D3D;
+    --color-gray-100: #242424;
+    --color-gray-50:  #181818;
+
+    /*Typographic*/
+    /*Se realiza correccion en el almacenado*/
+    --font-roboto: "Roboto";
+    --font-secondary: "Lora";
+
+    /*Variants typhografic*/
+      /* Font weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+
+    /*Font Size*/
+
+--fs-xxxxl: 8.0rem;   /* 128px */
+--fs-xxxl: 6.4rem;    /* 102.4px */
+--fs-xxl: 4.8rem;     /* 76.8px */
+--fs-xl: 4.0rem;      /* 64px */
+--fs-lg: 3.2rem;      /* 51.2px */
+--fs-md: 2.4rem;      /* 38.4px */
+--fs-sm: 2.0rem;      /* 32px */
+--fs-xs: 1.6rem;      /* 25.6px */
+--fs-xxs: 1.4rem;     /* 22.4px */
+--fs-xxxs: 1.2rem;    /* 19.2px */
+--fs-xxxxs: 0.5rem;   /* 8px */
+
+
+}

@@ -1,0 +1,43 @@
+@import url(token.css);
+@import url(semantic.css);
+/* @import url(base.css); */
+@import "tailwindcss";
+
+
+
+@theme {
+
+    --color-brand: var(--color-brand);
+    --color-brand-hover: var(--color-brand-hover);
+    --color-brand-softt: var(--color-brand-soft);
+    --color-background:var(--color-background);
+    --color-surface: var(--color-surface);
+    --color-surface-muted: var(--color-surface-muted);
+    --color-text-primary: var(--color-text-primary);
+    --color-text-secondary: var(--color-text-secondary);
+    --color-text-muted: var(--color-text-muted);
+    --color-text-inverse: var(--color-text-inverse);
+    --color-border: var(--color-border); 
+    --color-border-strong: var(--color-border-strong);
+    --color-warning: var(--color-warning);
+
+    /*Nuevo creado por Jhonier para los textos de labes y placeholders*/
+    --color-label: var(--color-text-label); /* Texto de labels y placeholder según el diseño */
+
+    /*FUENTES DE TEXTO*/
+
+    --font-body: var(--font-body); /*Fuente principal para textos de lectura*/
+    --font-text-secondary: var(--font-text-secondary);
+
+    /*VARIANTES DE TEXTO*/
+    --font-label-weight: var(--font-weight-medium); 
+    --font-weight-label: var(--font-label-weight);
+    --font-weight-heading: var(--font-heading-weight);/*Peso para los textos de los labels y los headings, respectivamente*/
+
+    /*TAMAÑO DE FUENTES*/
+    --text-mostsmall: var(--fs-size-mostsmall);
+
+
+    
+
+}

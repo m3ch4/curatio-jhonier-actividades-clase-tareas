@@ -1,0 +1,53 @@
+@import url(token.css); 
+/*Son roles de la interfaz*/
+
+:root{
+
+    /* BRAND */
+
+    --color-brand: var(--color-primary-400);
+    --color-brand-hover: var(--color-primary-900); /*Generalmente es de un tono mas alto*/
+    --color-brand-soft: var(--color-primary-300);
+
+    /*BACKGROUND*/
+
+  --color-background: var(--color-gray-100); /* Fondo de toda la aplicación */
+  --color-surface: var(--color-white); /* Fondo de modales, cards, containers */
+  --color-surface-muted: var(--color-gray-200); /* Zonas secundarias, con menos importancia */
+
+    /* TEXT */
+
+  --color-text-primary: var(--color-gray-900); /* Color principal de lectura, títulos, texto base del documento */
+  --color-text-secundary: var(--color-gray-700); /* Textos menos dominantes */
+  --color-text-muted: var(--color-gray-500); /* Textos deshabilitado por ejemplo */
+  --color-text-inverse: var(--color-gray-50); /* Textos invertido */
+
+  /*Se agregan fuentes y variantes a la semantica*/
+  --font-body: var(--font-roboto); /*Fuente principal para textos de lectura*/
+  --font-text-secondary: var(--font-text-secondary); /*Fuente secundaria para textos de lectura, como citas o destacados*/
+  --font-label-weight: var(--font-weight-medium);
+  --font-heading-weight: var(--font-weight-bold);/*Peso para los textos de los labels y los headings, respectivamente*/
+
+  /*/*Nuevo creado por Jhonier para los textos de labes y placeholders*/
+  --color-text-label: var(--color-black); /* Texto de labels y placeholder según mi diseño */
+
+    /*BORDER*/
+    --color-border: var(--color-secondary-500);/*Borde principal*/
+    --color-border-strong: var(--color-black);/*Bordes mas fuertes, */
+
+
+    /*STATE*/
+
+    --color-warning: var(--color-yellow-300);
+
+    /*TAMAÑO DE TEXTOS*/
+
+    --fs-size-mostsmall: var(--fs-xxxxs);
+
+    /*YA NO DEPENDEMOS DE NOMBRES DE COLOR,
+        DEPENDEMOS DE INTENCIÓN
+    */
+
+
+
+}
