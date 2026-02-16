@@ -21,7 +21,8 @@
     --color-border-strong: var(--color-border-strong);
     --color-warning: var(--color-warning);
 
-    /*Nuevo creado por Jhonier para los textos de labes y placeholders*/
+/*Agregacion las nuevas variables de color, tipografia para los textos de labels y placeholders*/
+
     --color-label: var(--color-text-label); /* Texto de labels y placeholder según el diseño */
 
     /*FUENTES DE TEXTO*/
@@ -34,10 +35,9 @@
     --font-weight-label: var(--font-label-weight);
     --font-weight-heading: var(--font-heading-weight);/*Peso para los textos de los labels y los headings, respectivamente*/
 
+
     /*TAMAÑO DE FUENTES*/
     --text-mostsmall: var(--fs-size-mostsmall);
 
-
-    
 
 }
