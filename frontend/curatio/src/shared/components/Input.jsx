@@ -1,5 +1,7 @@
 //Creacion de componente input
-//Modificacion del classname del label para que tome el color de texto definido en el diseño (text-label) de global.css
+//Modificacion del classname del label para que tome el 
+// color de texto definido en el diseño (text-label) de 
+// global.css
 
 export default function Input({ label, type = "text", ...props }) {
   return (
@@ -47,9 +49,12 @@ export default function Input({ label, type = "text", ...props }) {
         />
 
         {/* Input visual
-        JHONIER- SE AGREGA LA PROPIEDAD placeholder:text-label para que el placeholder tome el color definido en el diseño (text-label) de global.css
-        se deja en color negro ya que es el mismo que manejamos en el diseño, se modifican los bordes y los bordes de la propiedad focus
-        */}
+        JHONIER- SE AGREGA LA PROPIEDAD placeholder:text-label
+        para que el placeholder tome el color definido en el diseño
+        (text-label) de global.css se deja en color negro ya que es
+        el mismo que manejamos en el diseño, se modifican los bordes
+        y los bordes de la propiedad focus se agregan tambien las 
+        propiedades a los inputs*/}
 
         <input
           type={type}
@@ -61,7 +66,10 @@ export default function Input({ label, type = "text", ...props }) {
           border
           border-border-strong
           px-4
-          text-base
+          text-label
+          font-body
+          font-heading
+          text-small
 
           placeholder:text-label
 

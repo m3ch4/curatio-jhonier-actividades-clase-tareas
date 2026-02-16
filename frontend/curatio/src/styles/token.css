@@ -82,7 +82,12 @@
 --fs-sm: 2.0rem;      /* 32px */
 --fs-xs: 1.6rem;      /* 25.6px */
 --fs-xxs: 1.4rem;     /* 22.4px */
---fs-xxxs: 1.2rem;    /* 19.2px */
+/*Se ajusta variable a 16px (1rem) para que coincida con
+los estilos, por defecto viene 16 px, pero es mejor prevenir
+que lamentar*/
+
+--fs-xxxs: 1.0rem;    /* 16px */
+
 
 /*Se agrega variable para texto muy pequeño*/
 --fs-xxxxs: 0.5rem;   /* 8px */

@@ -37,6 +37,7 @@
 
 
     /*TAMAÑO DE FUENTES*/
+    --text-small: var(--fs-size-small); /*8px*/
     --text-mostsmall: var(--fs-size-mostsmall);
 
 

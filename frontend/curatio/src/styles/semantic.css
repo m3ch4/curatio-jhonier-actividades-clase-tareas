@@ -41,8 +41,8 @@
     --color-warning: var(--color-yellow-300);
 
     /*TAMAÑO DE TEXTOS*/
-
-    --fs-size-mostsmall: var(--fs-xxxxs);
+    --fs-size-small: var(--fs-xxxs);
+    --fs-size-mostsmall: var(--fs-xxxxs); /*8px*/
 
     /*YA NO DEPENDEMOS DE NOMBRES DE COLOR,
         DEPENDEMOS DE INTENCIÓN
