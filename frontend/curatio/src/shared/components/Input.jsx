@@ -71,7 +71,12 @@ export default function Input({ label, type = "text", ...props }) {
           font-heading
           text-small
 
+          
           placeholder:text-label
+          placeholder:text-label
+          placeholder:text-small
+          placeholder:font-body
+          placeholder:text-font-heading
 
 
 
