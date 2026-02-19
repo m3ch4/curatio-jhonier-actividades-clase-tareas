@@ -1,4 +1,4 @@
-
+/*Creacion de componente*/
 export default function Buttom({
     variant = "primary",    //Define el estilo visual
     size = "md",
