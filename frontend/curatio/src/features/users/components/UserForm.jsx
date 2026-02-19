@@ -1,6 +1,23 @@
-import Input from "../../../shared/components/Input";
+import Input from "@/shared/components/Input";
+import Buttom from "../../../shared/components/Button";
+
 
 export default function UserForm() {
+  const handleNameChange = (e) => {
+    console.log("Nombre del usuario", e.target.value);  {/*Almacenar el ingreso de datos en un input*/}
+    
+  };
+
+  const handleEmailBlur = (b) => {                      {/*Hace referencia a cuando yo salgo del input*/}
+  console.log("Email del usuario", b.target.value);
+  };
+
+  const handleButtonSubmit = (s) => {                      {/*Hace referencia a cuando yo salgo del input*/}
+  console.log("Email del usuario", s.target.value);
+  };
+  
+  
+
   return (
     <div>
       {/*Formulario para crear el usuario REALIZADO POR JHONIER G */}
@@ -11,6 +28,7 @@ export default function UserForm() {
           label="Nombre y Apellidos"
           placeholder="Juan Rivera Grisales"
           name="fullNames"
+          onChange={handleNameChange}
           >
 
         </Input>
@@ -19,7 +37,9 @@ export default function UserForm() {
           label="Numero de documento"
           placeholder="123456789"
           type="number"
-          name="documentNumber">
+          name="documentNumber"
+          onBlur={handleEmailBlur}>
+          
         </Input>
 
         {/*DATOS DE CONTACTO*/}
@@ -32,7 +52,7 @@ export default function UserForm() {
         <Input
           label="Numero de telefono"
           placeholder="123456789"
-          type="number"
+          type="tel"
           name="phoneNumber">
         </Input>
 
@@ -41,6 +61,7 @@ export default function UserForm() {
           placeholder="juan@ejemplo.com"
           type="email"
           name="email">
+          
         </Input>
 
         <Input
@@ -64,6 +85,27 @@ export default function UserForm() {
           type="date"
           name="endDate">
         </Input>
+
+        {/*Actions*/}
+        <div className="flex items-center justify-center gap-12">
+          <Buttom
+            variant="secondary"
+            size="sm"
+            onClick={() => console.log("Oprimió cancelar")}>
+            Cancelar
+          </Buttom>
+    
+        <Buttom
+          variant="primary"
+          size="md"
+          type="submit"
+          onSubmit={handleButtonSubmit}
+          onClick={() => console.log("Oprimió guardar")}>
+          Guardar
+        </Buttom>
+          
+
+      </div>
 
 
 

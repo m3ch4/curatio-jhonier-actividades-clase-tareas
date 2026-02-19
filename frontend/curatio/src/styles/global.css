@@ -7,23 +7,23 @@
 
 @theme {
 
-    --color-brand: var(--color-brand);
-    --color-brand-hover: var(--color-brand-hover);
-    --color-brand-softt: var(--color-brand-soft);
-    --color-background:var(--color-background);
-    --color-surface: var(--color-surface);
-    --color-surface-muted: var(--color-surface-muted);
-    --color-text-primary: var(--color-text-primary);
-    --color-text-secondary: var(--color-text-secondary);
-    --color-text-muted: var(--color-text-muted);
-    --color-text-inverse: var(--color-text-inverse);
-    --color-border: var(--color-border); 
-    --color-border-strong: var(--color-border-strong);
-    --color-warning: var(--color-warning);
+    --color-brand: var(--semantic-brand);
+    --color-brand-hover: var(--semantic-brand-hover);
+    --color-brand-softt: var(--semantic-brand-soft);
+    --color-background:var(--semantic-background);
+    --color-surface: var(--semantic-surface);
+    --color-surface-muted: var(--semantic-surface-muted);
+    --color-text-primary: var(--semantic-text-primary);
+    --color-text-secondary: var(--semantic-text-secondary);
+    --color-text-muted: var(--semantic-text-muted);
+    --color-text-inverse: var(--semantic-text-inverse);
+    --color-border: var(--semantic-border); 
+    --color-border-strong: var(--semantic-border-strong);
+    --color-warning: var(--semantic-warning);
 
 /*Agregacion las nuevas variables de color, tipografia para los textos de labels y placeholders*/
 
-    --color-label: var(--color-text-label); /* Texto de labels y placeholder según el diseño */
+    --color-label: var(--semantic-text-label); /* Texto de labels y placeholder según el diseño */
 
     /*FUENTES DE TEXTO*/
 
@@ -37,7 +37,7 @@
 
 
     /*TAMAÑO DE FUENTES*/
-    --text-small: var(--fs-size-small); /*8px*/
+    --text-small: var(--fs-size-small);
     --text-mostsmall: var(--fs-size-mostsmall);
 
 
