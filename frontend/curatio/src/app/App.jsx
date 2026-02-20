@@ -1,7 +1,9 @@
 //Se comenta para que no entre en conflicto con el CreateUserPage, que es el que se va a mostrar en la pagina de crear usuario
 //import UserForm from "../features/users/components/UserForm";
+import UserForm from "../features/users/components/UserForm";
 import CreateUserPage from "../features/users/pages/CreateUserPage";
-import DeleteCounter from "../shared/components/DeleteCountter";
+import DeleteCountter from "../shared/components/DeleteCountter.jsx";
+import DeleteUseEffect from "../shared/components/DeleteUseEffect.jsx";
 
 export default function App() {
 
@@ -14,8 +16,9 @@ export default function App() {
             <div>
                 {/* <UserForm />  */}
                 {/* <CreateUserPage/> */}
-                <DeleteCounter />
+                {/* <DeleteCounter /> */}
+                <DeleteUseEffect />
             </div>
         </div>
-    )
-}
+    );
+};
