@@ -4,6 +4,7 @@ import UserForm from "../features/users/components/UserForm";
 import CreateUserPage from "../features/users/pages/CreateUserPage";
 import DeleteCountter from "../shared/components/DeleteCountter.jsx";
 import DeleteUseEffect from "../shared/components/DeleteUseEffect.jsx";
+import Select from "../shared/components/Select.jsx";
 
 export default function App() {
 
@@ -14,10 +15,11 @@ export default function App() {
             </h1>
 
             <div>
-                {/* <UserForm />  */}
+                <UserForm />
                 {/* <CreateUserPage/> */}
                 {/* <DeleteCounter /> */}
-                <DeleteUseEffect />
+                {/* <DeleteUseEffect /> */}
+                {/* <Select/> */}
             </div>
         </div>
     );
