@@ -1,7 +1,6 @@
 import Input from "@/shared/components/Input";
 import Buttom from "../../../shared/components/Button";
 import Select from "../../../shared/components/Select";
-import selectServices from "@/features/users/services/selectService";
 import { useEffect, useState } from "react";
 import { getDocumentTypes } from "../services/selectService";
 
@@ -41,11 +40,6 @@ export default function UserForm() {
           onChange={handleNameChange}
           >
         </Input>
-
-        <Select>
-
-
-        </Select>
 
         <Input
           label="Numero de documento"
