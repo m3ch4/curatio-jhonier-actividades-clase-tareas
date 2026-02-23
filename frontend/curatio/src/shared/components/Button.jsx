@@ -7,8 +7,8 @@ export default function Buttom({
     ...props
 }) {
     const variants = {
-        primary : "border border-border bg-soft text-inverse hover:bg-brand-hover",
-        secondary : "border border-border bg-brand text-primary hover:bg-brand-soft",
+        primary : "border border-border-strong bg-primarybtnbg text-primarybtntext font-body font-heading text-small hover:bg-primarybtnhoverbg hover:text-label hover:border-1",
+        secondary : "border border-border-strong bg-secondarybtnbg text-secondarybtntext font-secondary font-heading text-small hover:bg-secondarybtnhoverbg hover:text-primarybtntext",
 }
 
         const sizes = {
@@ -34,7 +34,7 @@ export default function Buttom({
                 className={
             `   relative
                 inline-flex items-center justify-center
-                rounded-md
+                rounded-4xl
                 transition-colors
                 ${variants[variant]}
                 ${sizes[size]}
@@ -48,5 +48,4 @@ export default function Buttom({
 
             </button>
         )
-   
 };

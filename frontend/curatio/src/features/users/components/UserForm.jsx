@@ -166,7 +166,7 @@ export default function UserForm() {
           type="submit"
           onSubmit={handleButtonSubmit}
           onClick={() => console.log("Oprimió guardar")}>
-          Guardar
+          Siguiente
         </Buttom>
           
 

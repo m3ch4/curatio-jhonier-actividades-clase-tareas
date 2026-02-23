@@ -28,7 +28,7 @@
     /*FUENTES DE TEXTO*/
 
     --font-body: var(--font-body); /*Fuente principal para textos de lectura*/
-    --font-text-secondary: var(--font-text-secondary);
+    --font-secondary: var(--font-text-secondary);
 
     /*VARIANTES DE TEXTO*/
     --font-label-weight: var(--font-weight-medium); 
@@ -37,19 +37,20 @@
 
 
     /*TAMAÑO DE FUENTES*/
-    --text-small: var(--fs-size-small);
-    --text-tittles: var(--fs-text-tittles);
-    --text-subtittles: var(--fs-text-subtittles);
-    --text-mostsmall: var(--fs-size-mostsmall);
+    --text-small: var(--fs-size-small); /*1rem 16 px*/
+    --text-tittles: var(--fs-text-tittles); /*2rem 32 px*/
+    --text-subtittles: var(--fs-text-subtittles); /*1.5rem 24px*/
+    --text-mostsmall: var(--fs-size-mostsmall); /*0.5rem 8px*/
 
 
     /*BOTONES*/
-    --button-primarybtn: var(--semantic-button-primaryclbtn);
-    --button-primary-hoverbtn: var(--semantic-button-primary-hoverclbtn);
-    --button-secondarybtn: var(--semantic-button-secondaryclbtn);
-    --button-secondaryhoverbtn: var(--semantic-button-secondary-hoverclbtn);
-    --text-button-primarybtn: var(--semantic-text-button-primarycltext);
-    --text-button-secondarybtn: var(--semantic-text-button-secondarycltext);
+    --color-primarybtnbg: var(--semantic-action-primary-bg);
+    --color-primarybtntext: var(--semantic-text-button-primary);
+    --color-primarybtnhoverbg: var(--semantic-action-primary-hover-bg);
+
+    --color-secondarybtnbg: var(--semantic-action-secondary-bg);
+    --color-secondarybtntext: var(--semantic-text-button-secondary);
+    --color-secondarybtnhoverbg: var(--semantic-action-secondary-hover-bg);
 
 
 }
