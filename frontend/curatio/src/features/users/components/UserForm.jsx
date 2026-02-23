@@ -5,172 +5,199 @@ import { useEffect, useState } from "react";
 import { getDocumentTypes, getRoles } from "../services/selectService";
 
 export default function UserForm() {
+  {
+    /*==========ESTADOS LISTA TIPOS DOCUMENTO==========*/
+  }
 
-{/*==========ESTADOS LISTA TIPOS DOCUMENTO==========*/}
+  const [documentTypes, setDocumentTypes] = useState([]);
 
-  const [documentTypes, setDocumentTypes] = useState([])
+  useEffect(() => {
+    getDocumentTypes().then(setDocumentTypes);
+  }, []);
 
-  useEffect(()=> {
-    getDocumentTypes().then(setDocumentTypes)
-  },[])
+  {
+    /*==========ESTADOS LISTA ROLES==========*/
+  }
+  const [roles, setRoles] = useState([]);
 
-
-{/*==========ESTADOS LISTA ROLES==========*/}
-  const [roles, setRoles] = useState([])
-
-  useEffect(()=> {
-  getRoles().then(setRoles)
-  },[])
-
-
+  useEffect(() => {
+    getRoles().then(setRoles);
+  }, []);
 
   /*==========EVENTOS/*==========*/
 
   const handleNameChange = (e) => {
-    console.log("Nombre del usuario", e.target.value);  {/*Almacenar el ingreso de datos en un input*/}
-    
+    console.log("Nombre del usuario", e.target.value);           {/*Almacenar el ingreso de datos en un input*/}
   };
 
-  const handleEmailBlur = (b) => {                      {/*Hace referencia a cuando yo salgo del input*/}
-  console.log("Email del usuario", b.target.value);
+  const handleEmailBlur = (b) => {
+    console.log("Email del usuario", b.target.value);            {/*Hace referencia a cuando yo salgo del input*/}
   };
 
-  const handleButtonSubmit = (s) => {                      {/*Envia datos del formulario*/}
-  console.log("Datos del formulario", s.target.value);
+  const handleButtonSubmit = (s) => {
+    console.log("Datos del formulario", s.target.value);          {/*Hace referencia a cuando yo oprimo el boton de submit*/} 
   };
-  
-  
 
   return (
     <div>
       {/*Formulario para crear el usuario REALIZADO POR JHONIER G */}
+      <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* ================= DATOS BASICOS ================= */}
+        <section className="grid gap-4 p-4 border rounded-xl">
+          <h2 className="
+          text-center 
+          text-subtittles 
+          font-bold 
+          text-label">
+            Datos basicos
+          </h2>
 
-      <form className="grid grid-cols-1 space-x-6">
-        {/*DATOS BASICOS */}
+          <Input
+            label="Nombre y Apellidos"
+            placeholder="Juan Rivera Grisales"
+            name="fullNames"
+            onChange={handleNameChange}
+          />
 
-        <h1
-        className="
-        text-center
-        text-subtittles
-        font-bold
-        text-label"
-        >DATOS BASICOS
-        </h1>
-        
-        <Input
-          label="Nombre y Apellidos"
-          placeholder="Juan Rivera Grisales"
-          name="fullNames"
-          onChange={handleNameChange}
-          >
-        </Input>
+          <Select
+            label="Tipos de documento"
+            name="documentTypes"
+            options={documentTypes}
+            placeholder="Tipo de documento"
+          />
 
-        <Select
-        label="Tipos de documento"
-        name="documentTypes"
-        options={documentTypes}
-        placeholder="Tipo de documento"
-        >
-        </Select>
+          <Input
+            label="Numero de documento"
+            placeholder="123456789"
+            type="number"
+            name="documentNumber"
+            onBlur={handleEmailBlur}
+          />
 
-        <Input
-          label="Numero de documento"
-          placeholder="123456789"
-          type="number"
-          name="documentNumber"
-          onBlur={handleEmailBlur}>
-          
-        </Input>
+          <div className="flex justify-between mt-6">
+            <Buttom
+              variant="secondary"
+              size="sm"
+              onClick={() => console.log("Oprimió cancelar")}
+            >
+              Cancelar
+            </Buttom>
 
-        {/*DATOS DE CONTACTO*/}
+            <Buttom
+              variant="primary"
+              size="sm"
+              type="submit"
+              onSubmit={handleButtonSubmit}
+              onClick={() => console.log("Oprimió siguiente")}
+            >
+              Siguiente
+            </Buttom>
+          </div>
+        </section>
 
-        <h1
-        className="
-        text-center
-        text-subtittles
-        font-bold
-        text-label"
-        >Datos de Contacto</h1>
+        {/* ================= CONTACTO ================= */}
+        <section className="grid gap-4 p-4 border rounded-xl">
+          <h2 className="
+          text-center 
+          text-subtittles 
+          font-bold 
+          text-label">
+            Datos de Contacto
+          </h2>
 
-        <Input
-          label="Direccion"
-          placeholder="Calle 123 #45-67"
-          name="address">
-        </Input>
+          <Input
+            label="Direccion"
+            placeholder="Calle 123 #45-67"
+            name="address"
+          />
 
-        <Input
-          label="Numero de telefono"
-          placeholder="123456789"
-          type="tel"
-          name="phoneNumber">
-        </Input>
+          <Input
+            label="Numero de telefono"
+            placeholder="123456789"
+            type="tel"
+            name="phoneNumber"
+          />
 
-        <Input
-          label="Correo electronico"
-          placeholder="juan@ejemplo.com"
-          type="email"
-          name="email">
-          
-        </Input>
+          <Input
+            label="Correo electronico"
+            placeholder="juan@ejemplo.com"
+            type="email"
+            name="email"
+          />
 
-        <Input
-          label="Confirmar correo electronico"
-          placeholder="juan@ejemplo.com"
-          type="email"
-          name="confirmEmail">
-        </Input>
+          <Input
+            label="Confirmar correo electronico"
+            placeholder="juan@ejemplo.com"
+            type="email"
+            name="confirmEmail"
+          />
 
-        {/*DATOS DE ROL*/}
+          <div className="flex justify-between mt-6">
+            <Buttom
+              variant="secondary"
+              size="sm"
+              onClick={() => console.log("Oprimió cancelar")}
+            >
+              Cancelar
+            </Buttom>
 
-        <h1
-        className="
-        text-center
-        text-subtittles
-        font-bold
-        text-label">Rol</h1>
+            <Buttom
+              variant="primary"
+              size="sm"
+              type="submit"
+              onSubmit={handleButtonSubmit}
+              onClick={() => console.log("Oprimió siguiente")}
+            >
+              Siguiente
+            </Buttom>
+          </div>
+        </section>
 
-        <Select
-        name="roles"
-        options={roles}
-        placeholder="Seleccione un rol"
-        >
-        </Select>
+        {/* ================= ROL ================= */}
+        <section className="grid gap-4 p-4 border rounded-xl">
+          <h2 className="
+          text-center 
+          text-subtittles 
+          font-bold 
+          text-label">
+            Rol
+          </h2>
 
-        <Input
-          label="fecha de inicio"
-          placeholder="2023-01-01"
-          type="date"
-          name="startDate">
-        </Input>
+          <Select
+            name="roles"
+            options={roles}
+            placeholder="Seleccione un rol"
+          />
 
-        <Input
-          label="fecha de fin"
-          placeholder="2023-12-31"
-          type="date"
-          name="endDate">
-        </Input>
+          <Input 
+          label="Fecha de inicio" 
+          type="date" 
+          name="startDate" />
 
+          <Input 
+          label="Fecha de fin" 
+          type="date" 
+          name="endDate"/>
 
-        {/*Actions*/}
-        <div className="flex items-center justify-center gap-12">
-          <Buttom
-            variant="secondary"
-            size="sm"
-            onClick={() => console.log("Oprimió cancelar")}>
-            Cancelar
-          </Buttom>
-    
-        <Buttom
-          variant="primary"
-          size="md"
-          type="submit"
-          onSubmit={handleButtonSubmit}
-          onClick={() => console.log("Oprimió guardar")}>
-          Siguiente
-        </Buttom>
-          
+          {/*justify-between ======> Distrubye los elementos a izquierda y derecha dejando el maximo espacio disponible entre ellos */}
+          <div className="flex justify-between">
+            <Buttom
+              variant="secondary"
+              size="sm"
+              onClick={() => console.log("Oprimió cancelar")}>
+              Cancelar
+            </Buttom>
 
-      </div>
+            <Buttom
+              variant="primary"
+              size="sm"
+              type="submit"
+              onSubmit={handleButtonSubmit}
+              onClick={() => console.log("Oprimió siguiente")}>
+              Crear usuario
+            </Buttom>
+          </div>
+        </section>
       </form>
     </div>
   );

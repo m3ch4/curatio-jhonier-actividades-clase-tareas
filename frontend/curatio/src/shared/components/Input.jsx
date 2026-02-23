@@ -29,7 +29,7 @@ export default function Input({ label, type = "text", ...props }) {
       h-12
       flex
       items-center
-      ">
+      " >
 
         {/* Area interactiva invisible (48px) */}
         <div
@@ -69,7 +69,6 @@ export default function Input({ label, type = "text", ...props }) {
           text-small
 
           
-          placeholder:text-label
           placeholder:text-label
           placeholder:text-small
           placeholder:font-body

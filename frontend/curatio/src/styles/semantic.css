@@ -34,7 +34,7 @@
   --semantic-text-label: var(--color-black); /* Texto de labels y placeholder según mi diseño */
   --semantic-text-button-secondary: var(--color-black); /* Color del texto de los botones secundarios */
   /*BORDER*/
-    --semantic-border: var(--color-secondary-500);/*Borde principal*/
+    --semantic-border: var(--color-secondary-600);/*Borde principal*/
     --semantic-border-strong: var(--color-black);/*Bordes mas fuertes, */
 
 
