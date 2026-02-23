@@ -24,15 +24,12 @@ export default function Input({ label, type = "text", ...props }) {
       {/*Contenerdor del input */}
 
       <div
-      
       className="
       relative
       h-12
       flex
       items-center
-      "
-      
-      >
+      ">
 
         {/* Area interactiva invisible (48px) */}
         <div

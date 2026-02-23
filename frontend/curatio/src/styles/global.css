@@ -38,7 +38,18 @@
 
     /*TAMAÑO DE FUENTES*/
     --text-small: var(--fs-size-small);
+    --text-tittles: var(--fs-text-tittles);
+    --text-subtittles: var(--fs-text-subtittles);
     --text-mostsmall: var(--fs-size-mostsmall);
+
+
+    /*BOTONES*/
+    --button-primarybtn: var(--semantic-button-primaryclbtn);
+    --button-primary-hoverbtn: var(--semantic-button-primary-hoverclbtn);
+    --button-secondarybtn: var(--semantic-button-secondaryclbtn);
+    --button-secondaryhoverbtn: var(--semantic-button-secondary-hoverclbtn);
+    --text-button-primarybtn: var(--semantic-text-button-primarycltext);
+    --text-button-secondarybtn: var(--semantic-text-button-secondarycltext);
 
 
 }

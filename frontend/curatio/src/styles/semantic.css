@@ -31,7 +31,7 @@
   /*/*Nuevo creado por Jhonier para los textos de labes y placeholders*/
   --semantic-text-label: var(--color-black); /* Texto de labels y placeholder según mi diseño */
 
-    /*BORDER*/
+  /*BORDER*/
     --semantic-border: var(--color-secondary-500);/*Borde principal*/
     --semantic-border-strong: var(--color-black);/*Bordes mas fuertes, */
 
@@ -41,8 +41,25 @@
     --semantic-warning: var(--color-yellow-300);
 
     /*TAMAÑO DE TEXTOS*/
-    --fs-size-small: var(--fs-xxxs);
+    --fs-text-tittles: var(--fs-sm); /*2rem 32 px*/
+    --fs-text-subtittles: var(--fs-xs); /*24px*/
+    --fs-size-small: var(--fs-xxxs); /*1rem 16 px*/
     --fs-size-mostsmall: var(--fs-xxxxs); /*8px*/
+
+
+
+    /*BOTONES*/
+    --semantic-button-primaryclbtn: var(--color-primary-400);
+    --semantic-button-primary-hoverclbtn: var(--color-primary-900);
+    --semantic-button-secondaryclbtn: var(--color-secondary-500);
+    --semantic-button-secondary-hoverclbtn: var(--color-secondary-700);
+    --semantic-text-button-primarycltext: var(--color-white);
+    --semantic-text-button-secondarycltext: var(--color-black);
+    --semantic-text-button-primaryfont: var(--font-roboto);
+    --semantic-text-button-secondaryfont: var(--font-lora);
+
+
+    
 
     /*YA NO DEPENDEMOS DE NOMBRES DE COLOR,
         DEPENDEMOS DE INTENCIÓN

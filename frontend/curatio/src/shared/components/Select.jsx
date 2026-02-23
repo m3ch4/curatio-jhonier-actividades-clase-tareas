@@ -1,19 +1,21 @@
 export default function Select({
     label,
     name,
-    options = []
+    options = [],
+    placeholder,
 }) {
     return (
         <div className="w-[320px]">
             {/*Si el label tiene contenido es igual a truthy si no es falsy  */}
             { label && (
             <label className="
-                text-mostsmall
-                mb-1
-                text-label
-                font-weight
-                font-body
-                font-heading
+            block
+            mb-1
+            text-mostsmall
+            text-label
+            font-weight
+            font-body
+            font-heading
             ">
                 {label}
             </label>
@@ -23,14 +25,15 @@ export default function Select({
             name={name}
             className="
                 w-full
-                h-12
+                h-8
                 rounded-md
                 border
-                border-border
-                px-4
+                border-strong
+                text-center
             ">
 
-                <option value="">Seleccione un tipo de documento</option>
+
+                <option value="">{placeholder}</option>
 
                 {options.map((option) =>  (
                     <option key={option.id} value={option.id}>
