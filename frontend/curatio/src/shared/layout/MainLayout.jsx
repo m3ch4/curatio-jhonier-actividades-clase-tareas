@@ -1,18 +1,25 @@
+import Navbar from "@/shared/layout/Navbar.jsx";
 import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar";
+import heroBg from "@/assets/images/imagen-hero.jpg"
 
-export default function MainLayout () {
-    return (
-        <div className="
-        min-h-screen
-        bg-background">
-            {/* Navbar */}
-            <Navbar/>;
+export default function MainLayout(){
 
-            <main className="mx-auto max-w-7 px-4 py-6">
-                <Outlet/>
+        return(
+            <div className="relative min-h-screen">
+                <div className="absolute inset-0 -z-10 bg-cover bg-center"
 
-            </main>        
-        </div>
-    );
+                    style={{backgroundImage: `url(${heroBg})`}}>
+                </div>
+
+                {/* Navbar*/}
+                <header className="-z-20">
+                    <Navbar/>;
+                </header>
+                
+                <main className="mx-auto max-w7 px-4 py-6">
+                    <Outlet />
+                </main>
+            </div>
+
+        );
 };
