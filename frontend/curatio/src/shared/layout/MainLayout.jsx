@@ -13,7 +13,7 @@ export default function MainLayout(){
 
                 {/* Navbar*/}
                 <header className="-z-20">
-                    <Navbar/>;
+                    <Navbar/>
                 </header>
                 
                 <main className="mx-auto max-w7 px-4 py-6">
