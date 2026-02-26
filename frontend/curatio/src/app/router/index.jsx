@@ -19,7 +19,7 @@ const router = createBrowserRouter([
                     element: <h1 className="p-4">Contacto</h1>
                 },
                 {
-                    path:"videos",
+                    path:"video",
                     element: <h1 className="p-4">Videos</h1>
                 },
         ]
