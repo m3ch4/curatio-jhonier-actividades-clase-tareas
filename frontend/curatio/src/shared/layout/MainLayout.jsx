@@ -11,9 +11,14 @@ export default function MainLayout(){
                     style={{backgroundImage: `url(${heroBg})`}}>
                 </div>
 
+                {/*Filtro*/}
+                <div className="absolute inset-0 -z-10 bg-black/40">
+                    
+                </div>
+
                 {/* Navbar*/}
-                <header className="-z-20">
-                    <Navbar/>
+                <header className="relativo z-20">
+                    <Navbar variant = "transparent"/>
                 </header>
                 
                 <main className="mx-auto max-w7 px-4 py-6">
