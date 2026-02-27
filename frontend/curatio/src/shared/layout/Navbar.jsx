@@ -18,9 +18,9 @@ const Navbar = ({variant = "solid"}) => {
           
           {/* Logo de marca */}
           <div className="flex items-center">
-            <a href="/" className="text-xl font-bold">
+            <Link to="/" className="text-xl font-bold">
               Curatio
-            </a>
+            </Link>
           </div>
 
 
