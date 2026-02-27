@@ -41,7 +41,14 @@ export default function UserForm() {
   return (
     <div>
       {/*Formulario para crear el usuario REALIZADO POR JHONIER G */}
-      <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <form className=" 
+      px-6 py-12 
+      grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 
+      bg-white/70 dark:bg-neutral-900/20 
+      backdrop-blur-md 
+      shadow-xl 
+      ring-1 
+      rounded-3xl">
         {/* ================= DATOS BASICOS ================= */}
         <section className="grid gap-4 p-4 border rounded-xl">
           <h2 className="

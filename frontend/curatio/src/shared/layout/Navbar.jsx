@@ -78,19 +78,19 @@ const Navbar = ({variant = "solid"}) => {
               </button>
 
               {isOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-lg border bg-background shadow-lg">
+                <div className="h-28 text-center absolute right-0 mt-2 w-48 border bg-background bg-white/70 dark:bg-neutral-900/20 backdrop-blur-md shadow-xl ring-1 rounded-3xl">
                   <ul className="py-2 text-sm">
                     <li>
                       <Link
-                        to="/perfil"
-                        className="block px-4 py-2 hover:bg-surface transition cursor-pointer"
+                        to="/login" /*"/perfil"*/
+                        className="block px-4 py-2 hover:bg-amber-300 rounded-t-3xl transition cursor-pointer"
                         onClick={() => setIsOpen(false)}>
                         Perfil
                       </Link>
                     </li>
                     <li>
                       <button
-                        className="w-full text-left px-4 py-2 hover:bg-surface transition cursor-pointer"
+                        className="w-full text-center px-4 py-2 hover: hover:bg-amber-300 rounded-b-3xl transition cursor-pointer"
                         onClick={() => {
                           setIsOpen(false);
                           console.log("Cerrar sesión");
