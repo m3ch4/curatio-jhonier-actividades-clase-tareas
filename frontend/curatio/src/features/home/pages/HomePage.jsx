@@ -1,5 +1,6 @@
 //import heroBg from "../../../assets/imagen-hero.jpg"
 import heroBg from "../../../assets/images/imagen-hero.jpg";
+import imageAdmin from "../../../assets/images/image-admin.jpg";
 
 export default function HomePage(){
 
@@ -7,19 +8,14 @@ export default function HomePage(){
         <section
             className="relative min-h-screen w-full flex items-center justify-center text-black"
             style={{
-                backgroundImage: `url(${heroBg})`, 
+                backgroundImage: `url(${imageAdmin})`, 
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}>
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-cover bg-center"></div>
 
             <div className="relative z-10 text-center text-white">
-                <h1 className="text-h1 font-heading">
-                    Bienvenido al SENA 
-                </h1>
-                <p>
-                    Aprende según tus gustos, desde panadería hasta control numérico
-                </p>
+
             </div>
         </section>
     )

@@ -1,4 +1,4 @@
-import { Search, User } from "lucide-react";
+import { Search, User, Cross } from "lucide-react";
 /*Nos enruta pero con react router*/
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -18,32 +18,43 @@ const Navbar = ({variant = "solid"}) => {
           
           {/* Logo de marca */}
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold">
+            <Link to="/" className="flex items-center gap-2 text-tittles font-heading font-body">
+              <Cross className="size-12 "/>
               Curatio
             </Link>
           </div>
 
 
           {/* Links de navegación */}
-          <ul className="hidden md:flex items-center gap-6">
+          <ul className="hidden md:flex items-center gap-6 font-body font-heading text-small text-label">
             <li>
               <Link to="/" className="hover:text-primary transition">
-                Inicio
+                Gestion de grupos
               </Link>
             </li>
             <li>
-              <Link to="/cursos" className="hover:text-primary transition">
-                Cursos
+              <Link to="/crear-usuario" className="hover:text-primary transition">
+                Usuarios
               </Link>
             </li>
             <li>
-              <Link to="/contacto" className="hover:text-primary transition">
-                Contacto
+              <Link to="/suppliers" className="hover:text-primary transition">
+                Proveedores
               </Link>
             </li>
             <li>
               <Link to="/video" className="hover:text-primary transition">
-                Video
+                Productos
+              </Link>
+            </li>
+            <li>
+              <Link to="/video" className="hover:text-primary transition">
+                Carrito
+              </Link>
+            </li>
+            <li>
+              <Link to="/video" className="hover:text-primary transition">
+                Ventas
               </Link>
             </li>
           </ul>
@@ -60,7 +71,7 @@ const Navbar = ({variant = "solid"}) => {
                 type="text"
                 placeholder="Buscar..."
                 className="pl-9 pr-4
-                 py-2.5 border rounded-lg text-body focus:outline-none focus:ring-2 focus:ring-primary"
+                  py-2.5 border rounded-lg text-body focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -74,7 +85,7 @@ const Navbar = ({variant = "solid"}) => {
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center justify-center size-10 rounded-full border hover:bg-surface transition"
               >
-                <User className="size-5" />
+                <User className="size-5 cursor-pointer" />
               </button>
 
               {isOpen && (
@@ -83,14 +94,14 @@ const Navbar = ({variant = "solid"}) => {
                     <li>
                       <Link
                         to="/login" /*"/perfil"*/
-                        className="block px-4 py-2 hover:bg-amber-300 rounded-t-3xl transition cursor-pointer"
+                        className="block px-4 py-2 hover:bg-surface rounded-t-3xl transition cursor-pointer"
                         onClick={() => setIsOpen(false)}>
                         Perfil
                       </Link>
                     </li>
                     <li>
                       <button
-                        className="w-full text-center px-4 py-2 hover: hover:bg-amber-300 rounded-b-3xl transition cursor-pointer"
+                        className="w-full text-center px-4 py-2 hover: hover:bg-surface rounded-b-3xl transition cursor-pointer"
                         onClick={() => {
                           setIsOpen(false);
                           console.log("Cerrar sesión");

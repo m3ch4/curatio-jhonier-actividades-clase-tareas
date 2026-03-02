@@ -1,8 +1,13 @@
-import {createBrowserRouter} from "react-router-dom"
+import {createBrowserRouter, Navigate, Outlet} from "react-router-dom"
 import MainLayout from "@/shared/layout/MainLayout"
 import ProfilePage from "../../features/users/pages/ProfilePage";
 import HomePage from "../../features/home/pages/HomePage";
 import AuthLayout from "../../shared/layout/AuthLayout";
+import DatosBasicosPage from "../../features/users/pages/DatosBasicosPage";
+import DatosContactoPage from "../../features/users/pages/DatosContactoPage";
+import RolPage from "../../features/users/pages/RolPage";
+import CreateFormSuppliers from "../../features/suppliers/CreateSuppliers";
+import DatosContactoSuppliers from "../../features/suppliers/DatosContactoSuppliers";
 
 const router = createBrowserRouter([
     {
@@ -12,13 +17,28 @@ const router = createBrowserRouter([
                     path: "/",
                     element: <HomePage/>
                 },
+                
                 {
-                    path:"cursos",
-                    element: <h1 className="p-4">Cursos</h1>
+                    path:"crear-usuario",
+                    element: <DatosBasicosPage/>
                 },
                 {
-                    path:"contacto",
-                    element: <h1 className="p-4">Contacto</h1>
+                    path:"suppliers",
+                    element: <Outlet />,
+                    children: [
+                        {
+                            index: true,
+                            element: <Navigate to="datos-basicos" replace />
+                        },
+                        {
+                            path: "datos-basicos",
+                            element: <CreateFormSuppliers />
+                        },
+                        {
+                            path: "datos-contacto",
+                            element: <DatosContactoSuppliers />
+                        }
+                    ]
                 },
                 {
                     path:"video",
@@ -44,6 +64,28 @@ const router = createBrowserRouter([
                 {
                     path:"reset-password",
                     element: <h1 className="p-4">Resetear mi contraseña</h1>
+                },
+                {
+                    path: "crear-usuario",
+                    element: <Outlet />,
+                    children: [
+                        {
+                            index: true,
+                            element: <Navigate to="datos-basicos" replace />
+                        },
+                        {
+                            path: "datos-basicos",
+                            element: <DatosBasicosPage />
+                        },
+                        {
+                            path: "datos-contacto",
+                            element: <DatosContactoPage />
+                        },
+                        {
+                            path: "rol",
+                            element: <RolPage />
+                        }
+                    ]
                 },
         ]
     }
