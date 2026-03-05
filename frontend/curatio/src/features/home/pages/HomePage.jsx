@@ -1,7 +1,9 @@
 import heroBg from "@/assets/images/imagen-hero.jpg"
 import { Section, User } from "lucide-react"
-//import { UserForm } from "../../users"
+//import { UserForm } from "../../users/components/UserForm.jsx"
 import { UserForm } from "@/features/users";
+
+
 export default function HomePage(){
 
     return(
