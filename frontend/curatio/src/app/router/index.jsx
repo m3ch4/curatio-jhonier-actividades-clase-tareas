@@ -1,7 +1,7 @@
 import {createBrowserRouter} from "react-router-dom"
 import MainLayout from "@/layouts/MainLayout"
 import ProfilePage from "../../features/users/pages/ProfilePage";
-import HomePage from "../../features/dashboard/pages/HomePage";
+import HomePage from "../../features/home/pages/HomePage";
 import AuthLayout from "@/layouts/AuthLayout";
 
 const router = createBrowserRouter([

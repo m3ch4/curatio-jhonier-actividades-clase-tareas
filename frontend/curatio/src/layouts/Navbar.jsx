@@ -1,77 +1,68 @@
-import { Search, User, Cross } from "lucide-react";
-/*Nos enruta pero con react router*/
-import { Link } from "react-router-dom";
+import { Search, User } from "lucide-react";
+import { Link, Links } from "react-router-dom";
 import { useState } from "react";
 
 
 
 const Navbar = ({variant = "solid"}) => {
-    const [isOpen, setIsOpen] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    // Estos son los estilos del NavBar para que quede transparente
-    <nav className = {`w-full border-b transition-color duration-300${variant === "transparent" ? "bg-transparent border-transparent absolute top-0 left-0 z-30"
-      : "bg-background border-border"}`}>
-
-
+    //Estos son los estilos del navbar para que quede transparente
+    <nav
+      className={`w-full border-b transition-colors duration-300 ${
+        variant === "transparent"
+          ? "bg-transparent border-transparent absolute top-0 left-0 z-30"
+          : "bg-background border-border"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-16 items-center justify-between">
-          
           {/* Logo de marca */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2 text-tittles font-heading font-body">
-              <Cross className="size-12 "/>
-              Curatio
-            </Link>
+            <li>
+              <Link to="/" className="text-xl font-bold">
+                Rico Programar
+              </Link>
+            </li>
           </div>
 
-
           {/* Links de navegación */}
-          <ul className="hidden md:flex items-center gap-6 font-body font-heading text-small text-label">
+          <ul className="hidden md:flex items-center gap-6">
             <li>
               <Link to="/" className="hover:text-primary transition">
-                Gestion de grupos
+                Inicio
               </Link>
             </li>
             <li>
-              <Link to="/crear-usuario" className="hover:text-primary transition">
-                Usuarios
+              <Link to="/cursos" className="hover:text-primary transition">
+                Cursos
               </Link>
             </li>
             <li>
-              <Link to="/suppliers" className="hover:text-primary transition">
-                Proveedores
+              <Link to="/videos" className="hover:text-primary transition">
+                Videos
               </Link>
             </li>
             <li>
-              <Link to="/video" className="hover:text-primary transition">
-                Productos
-              </Link>
-            </li>
-            <li>
-              <Link to="/video" className="hover:text-primary transition">
-                Carrito
-              </Link>
-            </li>
-            <li>
-              <Link to="/video" className="hover:text-primary transition">
-                Ventas
+              <Link to="/contacto" className="hover:text-primary transition">
+                Contacto
               </Link>
             </li>
           </ul>
 
-
           {/* Sección derecha: búsqueda + usuario */}
           <div className="flex items-center gap-4">
-            
             {/* Buscador */}
             <div className="relative hidden sm:block">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-gray-500" />
-            
+
               <input
                 type="text"
                 placeholder="Buscar..."
                 className="pl-9 pr-4
-                  py-2.5 border rounded-lg text-body focus:outline-none focus:ring-2 focus:ring-primary"
+                 py-2.5 border rounded-lg text-body focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
@@ -80,32 +71,48 @@ const Navbar = ({variant = "solid"}) => {
               <User className="size-5" />
             </button> */}
 
+            {/* Usuario */}
             <div className="relative">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center justify-center size-10 rounded-full border hover:bg-surface transition"
               >
-                <User className="size-5 cursor-pointer" />
+                <User className="size-5" />
               </button>
 
               {isOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-lg border bg-background shadow-lg">
+                <div
+                  className="
+                      px-6 py-6
+                      grid grid-cols-1 
+                      gap-6
+                    bg-white/70
+                    dark:bg-neutral-900/30
+                      backdrop-blur-md
+                      shadow-xl
+                      ring-1
+                      rounded-3xl
+                      absolute right-0 mt-2 w-48 
+                      bg-background"
+                >
                   <ul className="py-2 text-sm">
                     <li>
                       <Link
-                        to="/login" /*"/perfil"*/
-                        className="block px-4 py-2 hover:bg-surface rounded-t-3xl transition cursor-pointer"
-                        onClick={() => setIsOpen(false)}>
-                        Perfil
+                        to="/login"
+                        className="block px-4 py-2 hover:bg-black transition"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Login
                       </Link>
                     </li>
                     <li>
                       <button
-                        className="w-full text-center px-4 py-2 hover: hover:bg-surface rounded-b-3xl transition cursor-pointer"
+                        className="w-full text-left px-4 py-2 hover:bg-black transition"
                         onClick={() => {
                           setIsOpen(false);
                           console.log("Cerrar sesión");
-                        }}>
+                        }}
+                      >
                         Cerrar sesión
                       </button>
                     </li>
@@ -120,9 +127,8 @@ const Navbar = ({variant = "solid"}) => {
   );
 };
 
+
 export default Navbar;
 
-/*
-Para dirigirme o navegar a una ruta uso <Link/>
-Para ejecutar lógica se usa button.
-*/
+//Para navegar a una ruta uso LINK 
+//Para ejecutar lógica se utiliza BUTTON
