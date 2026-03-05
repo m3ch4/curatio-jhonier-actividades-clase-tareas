@@ -89,7 +89,7 @@ const Navbar = ({variant = "solid"}) => {
               </button>
 
               {isOpen && (
-                <div className="h-28 text-center absolute right-0 mt-2 w-48 border bg-background bg-white/70 dark:bg-neutral-900/20 backdrop-blur-md shadow-xl ring-1 rounded-3xl">
+                <div className="absolute right-0 mt-2 w-48 rounded-lg border bg-background shadow-lg">
                   <ul className="py-2 text-sm">
                     <li>
                       <Link
