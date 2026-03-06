@@ -1,10 +1,15 @@
 import heroBg from "@/assets/images/imagen-hero.jpg"
+import { products } from "../../../data/products/products";
 import { Section, User } from "lucide-react"
 //import { UserForm } from "../../users/components/UserForm.jsx"
 import { UserForm } from "@/features/users";
+import { Card } from "@/shared/components";
 
 
 export default function HomePage(){
+
+    // /*Encontrar car por id*/
+    // const product = products.find(p => p.id === 1)
 
     return(
         <section
@@ -14,17 +19,29 @@ export default function HomePage(){
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}>
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0"></div>
 
             <div className="relative z-10 text-center text-white">
                 <h1 className="text-h1 font-heading ">
-                    Bienvenido al SENA 
+                    Curatio productos 
                 </h1>
-                <p>
-                    Aprende según tus gustos, desde panadería hasta control numérico
-                </p>
 
-                <UserForm/>
+                <div className="
+                grid
+                gap-8
+                sm:grid-cols-2
+                lg:grid-cols-3
+                xl:grid-cols-4
+                justify-items-centercenter">
+
+                {products.map((product) =>(<Card key = {product.id} product={product}/>))}
+
+                {/* Renderiza ina card por id
+                product && <Card product = {product}/> */}
+
+
+                </div>
+
             </div>
 
         </section>
