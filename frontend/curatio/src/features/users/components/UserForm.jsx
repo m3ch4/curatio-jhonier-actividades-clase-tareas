@@ -3,8 +3,11 @@ import Buttom from "../../../shared/components/Button";
 import Select from "../../../shared/components/Select";
 import { useEffect, useState } from "react";
 import { getDocumentTypes, getRoles } from "../services/selectService";
+import { AvatarUploader } from "../../../shared/components";
 
 export default function UserForm() {
+  const [avatarUrl, setAvatarUrl] = useState(null);
+
   {
     /*==========ESTADOS LISTA TIPOS DOCUMENTO==========*/
   }
@@ -178,6 +181,17 @@ export default function UserForm() {
           label="Fecha de fin" 
           type="date" 
           name="endDate"/>
+
+                  <div className="w-[320px] text-white">
+
+        <AvatarUploader onChange={setAvatarUrl} />
+        {avatarUrl && (
+        <p className="mt-4 text-sm text-gray-400">
+        URL guardada en BD: {avatarUrl}
+        </p>
+        )}
+        </div>
+
 
           {/*justify-between ======> Distrubye los elementos a izquierda y derecha dejando el maximo espacio disponible entre ellos */}
           <div className="flex justify-between">

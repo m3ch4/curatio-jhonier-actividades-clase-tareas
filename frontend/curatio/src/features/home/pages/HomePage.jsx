@@ -4,6 +4,7 @@ import { Section, User } from "lucide-react"
 //import { UserForm } from "../../users/components/UserForm.jsx"
 import { UserForm } from "@/features/users";
 import { Card } from "@/shared/components";
+import { FileInput } from "../../../shared/components";
 
 
 export default function HomePage(){
@@ -25,6 +26,7 @@ export default function HomePage(){
                 <h1 className="text-h1 font-heading ">
                     Curatio productos 
                 </h1>
+
 
                 <div className="
                 grid
