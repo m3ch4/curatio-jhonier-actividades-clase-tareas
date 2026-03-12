@@ -3,7 +3,9 @@ import MainLayout from "@/layouts/MainLayout"
 import ProfilePage from "../../features/users/pages/ProfilePage";
 import HomePage from "../../features/home/pages/HomePage";
 import AuthLayout from "@/layouts/AuthLayout";
-
+import ConfigUserPage from "../../features/users/pages/ConfigUserPages";
+import ListUserPage from "../../features/users/pages/ListUserPage";
+import CreateUserPage from "../../features/users/pages/CreateUserPage";
 const router = createBrowserRouter([
     {
             element:<MainLayout/>,
@@ -13,16 +15,16 @@ const router = createBrowserRouter([
                     element: <HomePage/>
                 },
                 {
-                    path:"cursos",
-                    element: <h1 className="p-4">Cursos</h1>
+                    path:"usuario",
+                    element: <ConfigUserPage/>
                 },
                 {
-                    path:"contacto",
-                    element: <h1 className="p-4">Contacto</h1>
+                    path:"tabla",
+                    element: <ListUserPage/>
                 },
                 {
-                    path:"video",
-                    element: <h1 className="p-4">Videos</h1>
+                    path:"/users/:id/edit",
+                    element: <CreateUserPage/>
                 },
                 {
                     path:"perfil",
