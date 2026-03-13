@@ -2,6 +2,9 @@ export default function Select({
     label,
     name,
     options = [],
+    error,
+    value,
+    onChange,
     placeholder,
 }) {
     return (
@@ -22,7 +25,10 @@ export default function Select({
             )}
 
             <select
+            value={value}
+            onChange={onChange}
             name={name}
+            error={error}
             className="
                 w-full
                 h-8
@@ -40,7 +46,9 @@ export default function Select({
                         {option.label}
                     </option>
                 ))}
-            </select>            
+            </select>
+                {error && <p className="text-mostsmall text-red-600 mt-1">{error}</p>}
+            
         </div>
 
 

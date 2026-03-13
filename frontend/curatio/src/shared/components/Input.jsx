@@ -3,20 +3,25 @@
 // color de texto definido en el diseño (text-label) de 
 // global.css
 
-export default function Input({ label, type = "text", ...props }) {
+export default function Input({label, 
+  type = "text", 
+  error,
+  ...props }) {
   return (
     <div className="w-[320px]">
       {/*label */}
       {label && (
         <label
-          className="block
-                              mb-1
-                              text-label
-                              font-body
-                              font-heading
-                              text-mostsmall
-                              "
-        >
+          className={`         
+            block
+              mb-1
+              text-label
+              font-body
+              font-heading
+              text-mostsmall
+              ${error ? "text-red-600" : "text-label"}
+              `}>
+
           {label}
         </label>
       )}
@@ -55,8 +60,8 @@ export default function Input({ label, type = "text", ...props }) {
 
         <input
           type={type}
-          className="
-          relative
+          className=
+        {`relative
           w-full
           h-10
           rounded-md
@@ -81,11 +86,11 @@ export default function Input({ label, type = "text", ...props }) {
 
           focus:ring-border
           focus:border-border
-          
-          "
+          ${error ? "text-red-600" : "border-border-strong"}`}
           {...props}
         />
       </div>
+      {error && <p className="text-mostsmall text-red-600 mt-1">{error}</p>}
     </div>
   );
 }
