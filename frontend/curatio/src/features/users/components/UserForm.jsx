@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getDocumentTypes } from "../services/selectService";
 import { AvatarUploader } from "@/features/users";
 import { UserSchema } from "../schemas/UserSchemas";
+import { Checkbox } from "@/shared/components";
 
 export default function UserForm() {
 
@@ -14,7 +15,12 @@ export default function UserForm() {
     documentType: "",
     documentNumber: "",
     password: "",
-    avatarUrl: null
+    avatarUrl: null,
+    //Flag Booleano para el checkbox
+    isStaff: false,
+    isActive: true,
+    isSuperuser: false,
+
   });
 
 
@@ -24,7 +30,7 @@ export default function UserForm() {
 const handleChange = (e) => { 
 // Se obtiene el nombre del campo (name) y su valor actual (value) 
 // desde el elemento que disparó el evento 
-  const { name, value } = e.target; 
+  const { name, value, checked, type } = e.target; 
 // Se actualiza el estado del formulario 
 // prev representa el estado anterior del formulario 
   setFormData((prev) => ({ 
@@ -32,7 +38,7 @@ const handleChange = (e) => {
   ...prev, 
 // Se actualiza únicamente el campo que cambió 
 // [name] permite usar el nombre del input como clave dinámica 
-  [name]: value, 
+  [name]: type === "checkbox" ? checked : value, 
 }));	
 };
 // HANDLER GENERAL PARA LOS INPUTS DEL FORMULARIO
@@ -172,6 +178,30 @@ rounded-xl
           onChange={handleChange}
           error = {errors.password}
         ></Input>
+
+        <Checkbox
+          id="isStaff"
+          name="isStaff"
+          label="Es staff"
+          checked={formData.isStaff}
+          onChange={handleChange}>
+        </Checkbox>
+
+        <Checkbox
+          id="isActive"
+          name="isActive"
+          label="Está activo"
+          checked={formData.isActive}
+          onChange={handleChange}>
+        </Checkbox>
+
+        <Checkbox
+          id="isSuperuser"
+          name="isSuperuser"
+          label="Es super Usuario"
+          checked={formData.isSuperuser}
+          onChange={handleChange}>
+        </Checkbox>
 
         <AvatarUploader
           onUpload={(url) =>
