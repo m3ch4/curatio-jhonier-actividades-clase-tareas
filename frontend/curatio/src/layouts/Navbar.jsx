@@ -1,12 +1,12 @@
 import { Search, User } from "lucide-react";
 import { Link, Links } from "react-router-dom";
-import { useState } from "react";
-
+//simport { useState } from "react";
+import { IconButton, Dropdown, DropdownTrigger, DropdownItem, DropdownContent } from "@/shared/components";
 
 
 const Navbar = ({variant = "solid"}) => {
 
-  const [isOpen, setIsOpen] = useState(false);
+  //const [isOpen, setIsOpen] = useState(false);
 
   return (
     //Estos son los estilos del navbar para que quede transparente
@@ -66,13 +66,13 @@ const Navbar = ({variant = "solid"}) => {
               />
             </div>
 
-            {/* Icono de usuario */}
+            {/* Icono de usuario
             {/* <button className="flex items-center justify-center size-10 rounded-full border hover:bg-gray-100 transition">
               <User className="size-5" />
             </button> */}
 
             {/* Usuario */}
-            <div className="relative">
+            {/*<div className="relative">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center justify-center size-10 rounded-full border hover:bg-surface transition"
@@ -119,6 +119,32 @@ const Navbar = ({variant = "solid"}) => {
                   </ul>
                 </div>
               )}
+            </div> */}
+            <div className="p-10">
+              <Dropdown>
+                <DropdownTrigger>
+                  <IconButton arialLabel = "Menú de usuario">
+                    <User className="size-5" />
+                  </IconButton>
+                </DropdownTrigger>
+
+                <DropdownContent>
+                  <DropdownItem>
+                    <Link
+                      to="/login"
+                      className="block px-4 py-2 hover:bg-black transition">
+                      Perfil
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link
+                      to="/"
+                      className="block px-4 py-2 hover:bg-black transition">
+                      Inicio
+                    </Link>
+                  </DropdownItem>
+                  </DropdownContent>
+              </Dropdown>
             </div>
           </div>
         </div>
